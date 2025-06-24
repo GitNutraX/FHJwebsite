@@ -1,0 +1,171 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ServiceSection from '../components/ServiceSection.astro';
+---
+
+<Layout title="Naše služby - FHJ-building">
+  <section class="py-16 px-4">
+    <div class="container mx-auto">
+      <h1 class="text-4xl font-bold mb-8 text-center text-blue-800">Naše služby</h1>
+      <p class="text-xl mb-12 text-center text-gray-700">Poskytujeme komplexní služby v oblasti elektroinstalací, fotovoltaiky, osvětlení a stavebních prací. Naše řešení jsou navržena s důrazem na kvalitu, spolehlivost a efektivitu.</p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <ServiceSection title="SDK Konstrukce a Podhledy" icon="🏗️">
+          <p class="mb-4 text-gray-700">Kompletní dodávky sádrokartonových systémů pro moderní stavby, kanceláře, provozy i halové vestavky. Specializujeme se na příčky, podhledy a designové prvky včetně realizace chlazených podhledů Lindner a dalších technických detailů s důrazem na funkčnost i estetiku.</p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-gray-700">
+            <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-2 text-blue-700">SDK příčky</h3>
+              <ul class="list-disc list-inside space-y-1">
+                <li>Akustické příčky – efektivní odhlučnění mezi místnostmi</li>
+                <li>Bezpečnostní příčky – zvýšená odolnost pro technické prostory</li>
+                <li>Požární předěly – certifikovaná řešení dle platných norem</li>
+                <li>Šachtové stěny – zakrytí rozvodů, instalací, šachet</li>
+                <li>Sádrokartonové příčky do vlhkých prostor</li>
+              </ul>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-2 text-blue-700">SDK podhledy</h3>
+              <ul class="list-disc list-inside space-y-1">
+                <li>Závěsné podhledy všech typů</li>
+                <li>Mnohoúrovňové a prostorově tvarované podhledy</li>
+                <li>Samonosné podhledy bez nutnosti zavěšení</li>
+                <li>Akustické podhledy – pro kanceláře, studia, zasedačky</li>
+                <li>Minerální kazetové podhledy</li>
+                <li>Požární předěly a oddělení únikových cest</li>
+                <li>Podhledy nad podhledem – např. pro integraci technologií</li>
+                <li>Konstrukce do vlhkých prostor – bazény, kuchyně, sociální zázemí</li>
+              </ul>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-2 text-blue-700">Ostatní SDK prvky</h3>
+              <ul class="list-disc list-inside space-y-1">
+                <li>Kastlíky a obklady nosníků / instalací</li>
+                <li>Revizní dvířka a přístupy k technologiím</li>
+                <li>Speciální tvary a dekorativní prvky</li>
+                <li>Povrchové úpravy (Q1–Q4) dle účelu</li>
+              </ul>
+            </div>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg shadow-sm mt-6">
+            <h3 class="text-xl font-semibold mb-2 text-blue-700">Komplexní řešení</h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-1">
+              <li>SDK konstrukce do halových vestavků</li>
+              <li>Požární příčky a podhledy dle normy</li>
+              <li>Kazetové a chlazené podhledy</li>
+              <li>Designové realizace na míru – důraz na detail a osvětlení</li>
+              <li>Dekorativní betonové stěrky menšího rozsahu</li>
+            </ul>
+          </div>
+        </ServiceSection>
+
+        <ServiceSection title="Fotovoltaické systémy (FVE)" icon="🔋">
+          <p class="mb-4 text-gray-700">Nabízíme moderní a úsporná řešení v oblasti fotovoltaiky. Fotovoltaické systémy představují chytrý krok k energetické soběstačnosti, úspoře nákladů a ekologickému provozu domácností. Zajistíme návrh, dodávku, montáž i vyřízení dotací.</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-700">
+            <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-2 text-blue-700">FVE pro rodinné domy</h3>
+              <ul class="list-disc list-inside space-y-1">
+                <li>Vlastní výroba elektřiny ze slunce</li>
+                <li>Snížení závislosti na dodavatelích energie</li>
+                <li>Možnost ukládání energie do baterií</li>
+                <li>Monitoring výroby a spotřeby pomocí aplikace</li>
+                <li>Efektivní využití přebytků energie</li>
+                <li>Chytré řízení FVE</li>
+                <li>Pomoc s vyřízením dotace NZÚ</li>
+              </ul>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-2 text-blue-700">FVE pro ohřev TUV (teplé užitkové vody)</h3>
+              <ul class="list-disc list-inside space-y-1">
+                <li>Napojení na elektrický bojler nebo akumulační nádrž</li>
+                <li>Jednoduchý systém bez potřeby baterií</li>
+                <li>Snížení nákladů na provoz ohřevu vody</li>
+                <li>Rychlá návratnost investice</li>
+              </ul>
+            </div>
+          </div>
+        </ServiceSection>
+
+        <ServiceSection title="Dodávka a montáž osvětlení" icon="💡">
+          <p class="mb-4 text-gray-700">Moderní osvětlení je víc než jen světelný zdroj. Ovlivňuje atmosféru, funkčnost i bezpečnost prostoru – doma, v práci i ve veřejném prostoru. Nabízíme komplexní služby v oblasti osvětlení od návrhu po realizaci, včetně odborné montáže a servisu.</p>
+          <h3 class="text-xl font-semibold mb-2 text-blue-700">Zajišťujeme osvětlení pro tyto typy objektů:</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-700">
+            <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+              <h4 class="font-semibold mb-1">🏠 Bydlení</h4>
+              <ul class="list-disc list-inside space-y-1 ml-4">
+                <li>Bytové domy</li>
+                <li>Rodinné domy</li>
+                <li>Samostatné byty</li>
+              </ul>
+              <h4 class="font-semibold mb-1 mt-4">🏢 Administrativní budovy</h4>
+              <ul class="list-disc list-inside space-y-1 ml-4">
+                <li>Kancelářské komplexy</li>
+                <li>Open space prostory</li>
+                <li>Recepce, chodby, zasedací místnosti</li>
+              </ul>
+              <h4 class="font-semibold mb-1 mt-4">🛒 Obchodní prostory</h4>
+              <ul class="list-disc list-inside space-y-1 ml-4">
+                <li>Maloobchodní jednotky</li>
+                <li>Prodejny, výlohy</li>
+                <li>Obchodní centra</li>
+              </ul>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+              <h4 class="font-semibold mb-1">🏭 Průmyslové objekty</h4>
+              <ul class="list-disc list-inside space-y-1 ml-4">
+                <li>Výrobní haly</li>
+                <li>Skladovací prostory</li>
+                <li>Venkovní areálové osvětlení</li>
+              </ul>
+              <h4 class="font-semibold mb-1 mt-4">🏟️ Sportovní zařízení</h4>
+              <ul class="list-disc list-inside space-y-1 ml-4">
+                <li>Fotbalové stadiony</li>
+                <li>Zimní stadiony</li>
+                <li>Tělocvičny a sportovní haly</li>
+                <li>Bazény a aquacentra</li>
+                <li>Venkovní hřiště</li>
+              </ul>
+              <h4 class="font-semibold mb-1 mt-4">🌃 Veřejné osvětlení</h4>
+              <ul class="list-disc list-inside space-y-1 ml-4">
+                <li>Ulice a náměstí v obcích a městech</li>
+                <li>Parky a odpočinkové zóny</li>
+                <li>Průmyslové a logistické areály</li>
+              </ul>
+            </div>
+          </div>
+        </ServiceSection>
+
+        <ServiceSection title="Stavby, rekonstrukce a zednické práce" icon="🛠️">
+          <p class="mb-4 text-gray-700">Ať už plánujete realizaci menšího či většího objektu, velmi často jsou jeho nedílnou součástí také stavební, zemní či další konstrukční práce. Toho jsme si dobře vědomi, a proto zajišťujeme výstavbu objektů, přístřešků, technických místností, jádrových úprav, příjezdových cest a dalších terénních nebo stavebních úprav.</p>
+          <p class="mb-4 text-gray-700">Jsme schopni zajistit rekonstrukci menšího rozsahu i realizaci projektů většího typu. Každé zadání řešíme s maximálním důrazem na kvalitu, spolehlivost a dodržení termínů.</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-700">
+            <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-2 text-blue-700">Rekonstrukce bytů</h3>
+              <ul class="list-disc list-inside space-y-1">
+                <li>Kompletní nebo částečné rekonstrukce bytových jednotek</li>
+                <li>Bourací a vyzdívací práce</li>
+                <li>Úpravy dispozic a jádrové rekonstrukce</li>
+                <li>Nové rozvody vody, odpadů a elektřiny</li>
+                <li>Omítky, štuky, obklady, dlažby, podlahy</li>
+                <li>Malby, nátěry, finální úpravy povrchů</li>
+              </ul>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-2 text-blue-700">Výstavba a rekonstrukce rodinných domů</h3>
+              <ul class="list-disc list-inside space-y-1">
+                <li>Hrubá stavba i stavba na klíč</li>
+                <li>Zateplení a fasády</li>
+                <li>Přístavby, garáže, technické místnosti</li>
+                <li>Úpravy terénu a zpevněné plochy</li>
+                <li>Stavební dozor a technická podpora</li>
+              </ul>
+            </div>
+          </div>
+        </ServiceSection>
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="/contact" class="bg-cta-orange text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors inline-block">Požádat o nabídku</a>
+      </div>
+    </div>
+  </section>
+</Layout>

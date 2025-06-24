@@ -1,0 +1,145 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const testimonials = [
+  { name: 'Marián Polák', comment: 'FHJ už poněkolikáté odvedli skvělou práci při rekonstrukci naší nemovitosti. Vřele doporučuji!' },
+  { name: 'Vlastimil Staněk', comment: 'Profesionální, dochvilní a hlavně znalí. Rychle nám vyřešili komplexní problémy, u kterých jsme nevěděli ani jak začít.' },
+  { name: 'Michal Dvořák', comment: 'Skvělý servis a rychlá instalace! Náklady za energie se nám oproti loňsku drasticky snížily.' },
+];
+
+const serviceOverview = [
+  { title: 'Elektrikářské služby', description: 'Kompletní elektroinstalace pro domy i komerční objekty.', icon: '⚡' },
+  { title: 'Instalace solárních panelů', description: 'Moderní fotovoltaické systémy pro energetickou soběstačnost.', icon: '☀️' },
+  { title: 'Stavby, rekonstrukce a zednické práce', description: 'Realizace stavebních projektů od základů po finální úpravy.', icon: '🛠️' },
+  { title: 'SDK Konstrukce a Podhledy', description: 'Dodávky a montáže sádrokartonových systémů pro různé prostory.', icon: '🏗️' },
+  { title: 'Dodávka a montáž osvětlení', description: 'Komplexní řešení osvětlení pro bydlení, administrativu i průmysl.', icon: '💡' },
+  { title: 'Fotovoltaické systémy (FVE)', description: 'Úsporná a ekologická řešení pro výrobu vlastní elektřiny.', icon: '🔋' },
+];
+
+const constructionBenefits = [
+  { title: 'Kompletní rekonstrukce', icon: '🏠' },
+  { title: 'Odborné práce', icon: '👷' },
+  { title: 'Specializované prostory', icon: '🏢' },
+  { title: 'Dokončovací práce', icon: '✨' },
+];
+---
+
+<Layout title="FHJ-building  - Komplexní Stavební a Elektrikářské Instalační Služby">
+  <section class="relative h-[600px] mb-12">
+    <img 
+      src="/images/gen-solary-detail.jpeg" 
+      alt="Solární panely" 
+      class="absolute inset-0 w-full h-full object-cover brightness-75"
+    >
+    <div class="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-transparent">
+      <div class="container mx-auto h-full flex items-center">
+        <div class="max-w-2xl text-white p-8">
+          <h1 class="text-5xl font-bold mb-6">Vítejte u FHJ-building</h1>
+          <p class="text-xl mb-8">Váš důvěryhodný partner pro komplexní elektrikářské služby a instalace solárních panelů. Přinášíme energii do vašeho života, udržitelně.</p>
+          <a 
+            href="/contact" 
+            class="bg-cta-orange text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
+          >
+            Získejte bezplatnou nabídku
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-4 bg-gradient-to-r from-blue-500 to-blue-700">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold mb-8 text-center text-white">Naše služby</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {serviceOverview.map(service => (
+          <a href="/services" class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300">
+            <div class="bg-blue-500 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-3xl">
+              {service.icon}
+            </div>
+            <h3 class="text-2xl font-semibold mb-2 text-blue-600">{service.title}</h3>
+            <p class="text-gray-700">{service.description}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-4">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold mb-12 text-center text-blue-800">Proč si vybrat nás</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {constructionBenefits.map(benefit => (
+          <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+            <div class="bg-blue-500 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-3xl">
+              {benefit.icon}
+            </div>
+            <h3 class="text-xl font-semibold text-blue-700">{benefit.title}</h3>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-4">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold mb-12 text-center text-blue-800">Co říkají naši zákazníci</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {testimonials.map(testimonial => (
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <p class="mb-4 italic text-gray-600">"{testimonial.comment}"</p>
+            <p class="font-semibold text-blue-600">- {testimonial.name}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-4 bg-gray-100">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-4 text-blue-800">REKONSTRUKCE DOMŮ A BYTŮ</h2>
+      <p class="text-xl mb-12 text-gray-700">Proměníme váš domov v místo snů!</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left mb-12">
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <h3 class="text-2xl font-semibold mb-4 text-blue-600">Naše služby zahrnují</h3>
+          <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <li>Výstavba objektů, přístřešků, technických místností</li>
+            <li>Jádrové úpravy, příjezdové cesty, terénní úpravy</li>
+            <li>Kompletní nebo částečné rekonstrukce bytových jednotek</li>
+            <li>Bourací a vyzdívací práce</li>
+            <li>Úpravy dispozic a jádrové rekonstrukce</li>
+            <li>Nové rozvody vody, odpadů a elektřiny</li>
+            <li>Omítky, štuky, obklady, dlažby, podlahy</li>
+            <li>Malby, nátěry, finální úpravy povrchů</li>
+            <li>Hrubá stavba i stavba na klíč</li>
+            <li>Zateplení a fasády</li>
+            <li>Přístavby, garáže, technické místnosti</li>
+            <li>Úpravy terénu a zpevněné plochy</li>
+            <li>Stavební dozor a technická podpora</li>
+          </ul>
+        </div>
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <h3 class="text-2xl font-semibold mb-4 text-blue-600">Kontaktní informace:</h3>
+          <p class="text-gray-700 mb-2">📞 +420 605 217 245</p>
+          <p class="text-gray-700 mb-2">📧 info@fhj-building.cz</p>
+          <p class="text-gray-700 mb-4">📍 Praha a okolí</p>
+          <h3 class="text-2xl font-semibold mb-4 text-blue-600">Kvalita - Rychlost - Férová cena</h3>
+          <p class="text-gray-700 mb-4">Naše práce je založena na kvalitě, spolehlivosti a dodržení termínů. Každé zadání řešíme s maximálním důrazem na detail.</p>
+          <a href="/contact" class="bg-cta-orange text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors inline-block">Získejte bezplatnou kalkulaci</a>
+        </div>
+      </div>
+
+      <a href="/services" class="bg-cta-orange text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors inline-block mt-8">
+        Stavíme a rekonstruujeme s důrazem na kvalitu, funkčnost a detail.
+      </a>
+    </div>
+  </section>
+
+  <section class="py-16 px-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white rounded-lg">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Potřebujete poradit s výběrem služby?</h2>
+      <p class="text-xl mb-8">Kontaktujte nás ještě dnes pro bezplatnou konzultaci a nabídku.</p>
+      <a href="/contact" class="bg-white text-cta-orange px-6 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors inline-block">Požádat o nabídku</a>
+    </div>
+  </section>
+</Layout>

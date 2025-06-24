@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+---
+
+<Layout title="Kontaktujte nás - ElectriSolar">
+  <section class="py-16 px-4 bg-gray-100">
+    <div class="container mx-auto">
+      <h1 class="text-4xl font-bold mb-8 text-center text-blue-800">Kontaktujte nás</h1>
+      <p class="text-xl mb-12 text-center text-gray-700">Máte dotazy nebo potřebujete bezplatnou konzultaci? Neváhejte nás kontaktovat!</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <h2 class="text-2xl font-semibold mb-4 text-blue-600">Kontaktní informace</h2>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex items-center">
+              <span class="mr-3 text-blue-500">📞</span> <strong>Telefon:</strong> +420 605 217 245
+            </li>
+            <li class="flex items-center">
+              <span class="mr-3 text-blue-500">📧</span> <strong>E-mail:</strong> info@fhj-building.cz
+            </li>
+            <li class="flex items-center">
+              <span class="mr-3 text-blue-500">📍</span> <strong>Adresa:</strong> Praha a okolí
+            </li>
+          </ul>
+          <h3 class="text-xl font-semibold mt-8 mb-4 text-blue-600">Otevírací doba</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li><strong>Pondělí - Pátek:</strong> 8:00 - 18:00</li>
+            <li><strong>Sobota:</strong> 9:00 - 14:00</li>
+            <li><strong>Neděle:</strong> Zavřeno</li>
+          </ul>
+        </div>
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <h2 class="text-2xl font-semibold mb-4 text-blue-600">Napište nám</h2>
+          <form 
+            name="contact"
+            method="POST"
+            action="/api/contact"
+            class="space-y-6"
+          >
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Jméno</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                required 
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 p-3"
+              >
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required 
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 p-3"
+              >
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Zpráva</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                rows="5" 
+                required 
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 p-3"
+              ></textarea>
+            </div>
+            <button 
+              type="submit" 
+              class="bg-cta-orange text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors w-full"
+            >
+              Odeslat zprávu
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

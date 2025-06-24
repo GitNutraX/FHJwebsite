@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const projects = [
+  {
+    title: "Instalace domácího solárního systému",
+    description: "Instalace solárního systému 5kW pro rodinný dům",
+    images: ["/images/gen-solary-detail.jpeg", "/images/gen-dum-solary.jpeg"]
+  },
+  {
+    title: "Modernizace komerční elektroinstalace",
+    description: "Kompletní rekonstrukce elektrického systému pro místní podnik",
+    images: ["/images/Gen-baterie-zed-instalace.jpeg", "/images/gen-rozvodna-skrin.jpeg"]
+  },
+  {
+    title: "Integrace chytré domácnosti",
+    description: "Instalace chytrých elektrických systémů v moderním domě",
+    images: ["/images/gen-solarni-panely-strecha.jpeg", "/images/gen-solarni-panely-dum-strecha.jpeg"]
+  }
+];
+---
+
+<Layout title="Naše projekty - ElectriSolar">
+  <h1 class="text-4xl font-bold mb-8 text-center">Naše minulé projekty</h1>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {projects.map((project, index) => (
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold mb-4">{project.title}</h2>
+        <p class="mb-4">{project.description}</p>
+        <div class="grid grid-cols-2 gap-2">
+          {project.images.map((image, imgIndex) => (
+            <img src={image} alt={`Projekt ${index + 1} Obrázek ${imgIndex + 1}`} class="w-full h-40 object-cover rounded" />
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <div class="mt-12 text-center">
+    <p class="mb-4">Máte zájem o jiné možnosti nebo speciální projekt?</p>
+    <a href="/contact" class="bg-primary text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-600 transition-colors inline-block">Kontaktujte nás pro další možnosti</a>
+  </div>
+</Layout>
