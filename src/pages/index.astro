@@ -10,10 +10,10 @@ const testimonials = [
 const serviceOverview = [
   { title: 'Elektrikářské služby', description: 'Kompletní elektroinstalace pro domy i komerční objekty.', icon: '⚡' },
   { title: 'Instalace solárních panelů', description: 'Moderní fotovoltaické systémy pro energetickou soběstačnost.', icon: '☀️' },
-  { title: 'Stavby, rekonstrukce a zednické práce', description: 'Realizace stavebních projektů od základů po finální úpravy.', icon: '🛠️' },
-  { title: 'SDK Konstrukce a Podhledy', description: 'Dodávky a montáže sádrokartonových systémů pro různé prostory.', icon: '🏗️' },
+  { title: 'Stavby, rekonstrukce a zednické práce', description: 'Realizace stavebních projektů od základů po finální úpravy.', icon: '🏗️' },
+  { title: 'SDK Konstrukce a Podhledy', description: 'Dodávky a montáže sádrokartonových systémů pro různé prostory.', icon: '🛠️' },
   { title: 'Dodávka a montáž osvětlení', description: 'Komplexní řešení osvětlení pro bydlení, administrativu i průmysl.', icon: '💡' },
-  { title: 'Fotovoltaické systémy (FVE)', description: 'Úsporná a ekologická řešení pro výrobu vlastní elektřiny.', icon: '🔋' },
+  { title: 'Solární ohřev TUV', description: 'Úsporná a ekologická řešení pro ohřev vody z FVE.', icon: '🔋' },
 ];
 
 const constructionBenefits = [
@@ -24,28 +24,31 @@ const constructionBenefits = [
 ];
 ---
 
-<Layout title="FHJ-building  - Komplexní Stavební a Elektrikářské Instalační Služby">
-  <section class="relative h-[600px] mb-12">
-    <img 
-      src="/images/gen-solary-detail.jpeg" 
-      alt="Solární panely" 
-      class="absolute inset-0 w-full h-full object-cover brightness-75"
-    >
-    <div class="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-transparent">
-      <div class="container mx-auto h-full flex items-center">
-        <div class="max-w-2xl text-white p-8">
-          <h1 class="text-5xl font-bold mb-6">Vítejte u FHJ-building</h1>
-          <p class="text-xl mb-8">Váš důvěryhodný partner pro komplexní elektrikářské služby a instalace solárních panelů. Přinášíme energii do vašeho života, udržitelně.</p>
-          <a 
-            href="/contact" 
-            class="bg-cta-orange text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
-          >
-            Získejte bezplatnou nabídku
-          </a>
+<Layout title="FHJ Building  - Komplexní Stavební a Elektrikářské Instalační Služby">
+  <div class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-500 opacity-75" style="background-attachment: fixed; background-size: cover;"></div>
+    <section class="relative h-[600px] mb-12 group">
+      <img
+        src="/images/gen-solary-detail.jpeg"
+        alt="Solární panely"
+        class="absolute inset-0 w-full h-full object-cover brightness-75 transition-all duration-500 group-hover:brightness-90"
+      >
+      <div class="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-transparent">
+        <div class="container mx-auto h-full flex items-center">
+          <div class="max-w-2xl text-white p-8">
+            <h1 class="text-5xl font-bold mb-6">Vítejte u FHJ Building</h1>
+            <p class="text-xl mb-8">Spolehlivý partner pro elektroinstalace a komplexní realizace staveb rodinných domů a bytů. Stavíme a opravujeme domy s důrazem na spolehlivost a udržitelná řešení.</p>
+            <a
+              href="/contact"
+              class="bg-cta-orange text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
+            >
+              Získejte bezplatnou nabídku
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
   <section class="py-16 px-4 bg-gradient-to-r from-blue-500 to-blue-700">
     <div class="container mx-auto">
@@ -143,3 +146,4 @@ const constructionBenefits = [
     </div>
   </section>
 </Layout>
+

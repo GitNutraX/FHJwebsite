@@ -44,7 +44,7 @@ const { title } = Astro.props;
     </main>
     <footer class="bg-gray-800 text-white p-4 mt-8">
       <div class="container mx-auto text-center">
-        <p>&copy; 2025 FHJ-building. Všechna práva vyhrazena.</p>
+        <p>&copy; 2025{new Date().getFullYear() > 2025 ? ` - ${new Date().getFullYear()}` : ''} FHJ Building. Všechna práva vyhrazena. Stavíme s hrdostí od roku 1995.</p>
       </div>
     </footer>
   </body>
